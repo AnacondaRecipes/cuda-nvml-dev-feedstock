@@ -26,9 +26,9 @@ source:
   sha256: 1894b70c5487a739c740929263fa3fbca80e53790647abc02b74eac024b97be8  # [win]
 
 build:
-  number: 1
+  number: 0
   binary_relocation: false
-  skip: true  # [osx or ppc64le]
+  skip: true  # [osx]
 
 requirements:
   build:
@@ -61,10 +61,12 @@ about:
   license_file: LICENSE
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: NVML native dev links, headers
   description: |
     NVML native dev links, headers
   doc_url: https://docs.nvidia.com/cuda/index.html
+  dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
   recipe-maintainers:
