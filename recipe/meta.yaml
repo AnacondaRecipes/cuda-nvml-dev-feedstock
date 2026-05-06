@@ -1,6 +1,6 @@
 {% set name = "cuda-nvml-dev" %}
-{% set version = "13.1.115" %}
-{% set cuda_version = "13.1" %}
+{% set version = "13.2.82" %}
+{% set cuda_version = "13.2" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-sbsa" %}  # [aarch64]
 {% set platform = "windows-x86_64" %}  # [win]
@@ -16,9 +16,9 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvml_dev/{{ platform }}/cuda_nvml_dev-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 88fe69c3b2e73d414eea2101813ae5819b0f7c9a1c5e4e98fb44e1ef88748c7d  # [linux64]
-  sha256: 9e27291f5a70dbb03c102a75c94423b4748e2d05c54134a61ab638d41570d8b7  # [aarch64]
-  sha256: 267d78d17dde7a96e2f70dbcc3cd11d2b4645f7d9b6744de8c32871b17978543  # [win]
+  sha256: 3065e63e8c3f0e287a564c83030c65a5f054a792e7d909f14697d6f573f916c6  # [linux64]
+  sha256: ab67085252164ca56a5ea829ed99c3c15e1f83de646177dec7aea308a0212b73  # [aarch64]
+  sha256: b24e8af8b1c369fe280d6895829b0d42177d5844a7cb3b79238e51e9c852f06c  # [win]
 
 build:
   number: 0
@@ -57,6 +57,7 @@ about:
   license_file: LICENSE
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: NVML native dev links, headers
   description: |
     NVML native dev links, headers
@@ -64,7 +65,5 @@ about:
   dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
-  skip-lints:
-    - license_file_overspecified
   recipe-maintainers:
     - conda-forge/cuda
